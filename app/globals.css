@@ -20,7 +20,9 @@
       }
   }
 
-
+body {
+  background-color: #EEEEEE
+}
 .mainmenuText{
     @apply text-black;
 }
@@ -30,4 +32,15 @@
 
 .mygradientBlue{
     @apply bg-gradient-to-r from-cyan-500 to-blue-500
+}
+
+.p-menuitem-link:hover {
+  background-color: #000 !important;
+}
+
+.p-menubar{
+  background-color: #393E46 !important;
+  background: rgb(2,0,36) !important;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,62,70,0.8073354341736695) 55%, rgba(238,238,238,1) 100%) !important;
+  
 }
