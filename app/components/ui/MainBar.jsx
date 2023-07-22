@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-
+import { useRouter } from 'next/navigation';
 
 //--------For Main Bar Prime ------------
 import { PrimeReactProvider } from 'primereact/api';
@@ -70,32 +70,35 @@ export default function MainBar() {
   )
 }
 
+function matchme(){
+    alert ('yeah')
+}
 
 export function MainBarPrime (){
-
+    const router = useRouter();
     const items = [
         {
-            label: 'File',
-            icon: 'pi pi-fw pi-file',
+            label: 'Home',
+            /* icon: 'pi pi-fw pi-home', */
+            icon: <img alt="home icon" className='mr-3' src="images/home.png" width={32} height={32} />,
+            command: (()=>router.push('/'))
+        },
+        {
+            label: 'Explore',
+            icon: 'pi pi-fw pi-car',
             items: [
                 {
-                    label: 'New',
-                    icon: 'pi pi-fw pi-plus',
-                    items: [
-                        {
-                            label: 'Bookmark',
-                            icon: 'pi pi-fw pi-bookmark'
-                        },
-                        {
-                            label: 'Video',
-                            icon: 'pi pi-fw pi-video'
-                        },
+                    label: 'Ideas',
+                    /*icon: 'pi pi-fw pi-bolt',*/
+                    icon: <img alt="library icon" className='mr-3' src="images/library.png" width={28} height={28} />,
+                    command : (()=>router.push('/ideas'))
 
-                    ]
                 },
                 {
                     label: 'Delete',
-                    icon: 'pi pi-fw pi-trash'
+                    icon: 'pi pi-fw pi-trash',
+                    command:(()=>matchme())
+                    
                 },
                 {
                     separator: true
@@ -106,29 +109,7 @@ export function MainBarPrime (){
                 }
             ]
         },
-        {
-            label: 'Edit',
-            icon: 'pi pi-fw pi-pencil',
-            items: [
-                {
-                    label: 'Left',
-                    icon: 'pi pi-fw pi-align-left'
-                },
-                {
-                    label: 'Right',
-                    icon: 'pi pi-fw pi-align-right'
-                },
-                {
-                    label: 'Center',
-                    icon: 'pi pi-fw pi-align-center'
-                },
-                {
-                    label: 'Justify',
-                    icon: 'pi pi-fw pi-align-justify'
-                },
-
-            ]
-        },
+        
         {
             label: 'Users',
             icon: 'pi pi-fw pi-user',
@@ -218,19 +199,19 @@ export function MainBarPrime (){
             </>
         const end = 
                 <>
-                    <div className='w-full ml-48'>
-                        <div>
-                            <InputText placeholder="Search" type="text" className='w-[300px]' />
+                    <div className='ml-56 max-md:ml-16 w-[280px] max-md:w-[220px] flex-col'>
+                        <div className='flex'>
+                            <InputText placeholder="Search" type="text" className='w-full h-[36px]' />
                         </div>
-                        <div className='flex justify-around w-1/2 mt-2'>
-                            <button className='bg-slate-500 rounded-full text-red-800 text-lg font-RetroCool w-[80px] hover:bg-yellow-600'>Login</button>
-                            <button className='bg-yellow-500 rounded-full text-red-800 text-lg font-RetroCool w-[80px]'>Signup</button>
+                        <div className='flex justify-around mt-2'>
+                            <button className='bg-slate-500 rounded-full text-red-800 text-lg font-RetroCool w-[80px] shadow-md shadow-black hover:bg-yellow-500'>Login</button>
+                            <button className='bg-yellow-500 rounded-full text-red-800 text-lg font-RetroCool w-[80px] shadow-md shadow-black'>Signup</button>
                         </div>
                     </div>
                 </>
     return (
         <PrimeReactProvider>
-            <div className="flex w-full shadow-sm shadow-[#222831] rounded-b-[70px] overflow-clip">
+            <div className="flex w-full shadow-sm shadow-[#222831]">
                 <Menubar model={items} start={start} end={end} />
             </div>
         </PrimeReactProvider>

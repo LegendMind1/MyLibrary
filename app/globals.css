@@ -21,7 +21,9 @@
   }
 
 body {
-  background-color: #EEEEEE
+  background-color: #EEEEEE;
+  /*color: #393E46*/
+  color: #001C30
 }
 .mainmenuText{
     @apply text-black;
