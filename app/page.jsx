@@ -31,6 +31,9 @@ export default function Home() {
       <div className='font-RetroCool text-blue-900 text-[42px] flex border-2 border-red-600'>
         <p className='border-2 text-center w-full border-yellow-400'>Prime React in Action</p>
       </div>
+      <div>
+        To think is an art...
+      </div>
     </>
   )
 }
