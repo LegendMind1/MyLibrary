@@ -46,3 +46,15 @@ body {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,62,70,0.8073354341736695) 55%, rgba(238,238,238,1) 100%) !important;
   
 }
+
+.parent {
+  width: 423px;
+}
+
+
+#bgdiv {
+  clip-path: polygon(0 0, 100% 0%, 100% 56%, 0% 100%);
+    background-image: linear-gradient(to right, transparent 10px, #000 100px, #b0102d 300px);
+  height: 140px;
+  width: 423px;
+}
