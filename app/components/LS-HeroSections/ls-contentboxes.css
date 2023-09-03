@@ -1,0 +1,46 @@
+
+  /* ============ Content Boxes x 4 =========== */
+
+  .content-box {
+    @apply bg-LS-bgOffWhite p-4 dark:bg-LS-bgDarkMode-RichBlack dark:text-LS-bgOffWhite duration-[1000ms];
+  }
+
+  /* ================= Content Boxes Borders =================== */
+
+.bdrTopGrdToRight {
+  
+  
+    border-top-width: 18px;
+  
+    border-style: solid;
+    border-image: linear-gradient(to right, #EEEEEE, #14213D) 1;
+  }
+  
+  .bdrRightGrdToBottom {
+    
+    border-right-width: 18px;
+  
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #14213D, #EEEEEE) 1;
+  
+  }
+  
+  .bdrTopGrdToLeft {
+    
+    
+    border-top-width: 18px;
+  
+    border-style: solid;
+    border-image: linear-gradient(to left, #EEEEEE, #14213D) 1;
+  }
+  
+  .bdrLeftGrdToBottom {
+    
+    border-left-width: 18px;
+  
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #14213D, #EEEEEE) 1;
+  
+  }
+  
+  /* ==================== */

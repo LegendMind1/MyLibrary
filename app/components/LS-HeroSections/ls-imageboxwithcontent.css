@@ -1,0 +1,58 @@
+/* ============== Hero Section ================== */
+
+.hero-image-lines{
+    object-fit:contain; 
+    object-position: '100%'
+    }
+    
+  .hero-image-bg{
+  height: auto;
+  width: 90% !important;
+  object-fit: 'fill'; 
+  object-position: '75%';
+  }
+  
+  .hero-image {
+    height: 80vh !important;
+    width: 40vw !important;
+    object-fit: 'fill'; 
+    /* object-position: '75%'; */
+    clip-path:polygon(0% 7%, 90% 1%, 95% 90%, 8% 100%);
+  }
+  
+  .hero-image2 {
+    height: 80vh !important;
+    width: auto !important;
+    object-fit: 'fill'; 
+    /* object-position: '75%'; */
+    clip-path:polygon(0% 15%, 90% 0%, 80% 80%, 0% 100%);
+  }
+  
+  
+  .clipme{
+    clip-path:polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%); 
+  }
+  
+  
+  @media only screen and (max-width: 1200px) {
+    .hero-image{
+      height: 50vh !important;
+      width: 40vw !important;
+      object-fit: 'fill'; 
+      /* object-position: '75%'; */
+      clip-path:polygon(0% 15%, 90% 0%, 80% 80%, 0% 100%);
+      }
+  
+    }
+  @media only screen and (max-width: 600px) {
+    .hero-image-bg{
+      height: 100vh !important;
+      width: 100% !important;
+      object-fit: 'fill'; 
+      object-position: '100%';
+      /* background-color: #001C30; */
+      }
+  }
+  /* ================================================ */
+
+

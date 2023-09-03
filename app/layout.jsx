@@ -1,3 +1,4 @@
+'use client'
 import './globals.css'
 import MainBar, {MainBarPrime} from './components/ui/MainBar'
 
@@ -25,6 +26,9 @@ export const metadata = {
   description: 'My Referenc Code and Library',
 }
 
+import { createContext } from 'react'
+export const MyContext = createContext();
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -37,7 +41,10 @@ export default function RootLayout({ children }) {
             <MainBarPrime />
           </div>
         </header>
+        <MyContext.Provider value={{abc:"Hello Bhai"}}>
+
         {children}
+        </MyContext.Provider>
       </body>
     </html>
   )

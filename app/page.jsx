@@ -1,17 +1,18 @@
+'use client'
+
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
+import TestForm from './components/TestForm/TestForm';
+import TestComponent from './components/TestComponent/TestComponent';
+
+
 export default function Home() {
-
-      
-
 
   return (
     <>
 
-      
-     
       <div>
         <ul className='font-fasthand text-lg p-4 text-red-800'>
           <li>Added through Tailwind after importing in globals.css @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap')</li>
@@ -45,6 +46,15 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div>
+      <TestForm />
+    </div>
+
+    <div>
+    <TestComponent />
+    </div>
+
     </>
   )
 }

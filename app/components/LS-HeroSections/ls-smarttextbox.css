@@ -1,0 +1,3 @@
+.stbContainer {
+    @apply flex-1 self-stretch m-5 mt-14 justify-center content-center items-center transition-all shadow-md shadow-[#2A2B2D] hover:shadow-lg hover:shadow-[#F7BA00] rounded-t-xl flex bg-gradient-to-b from-[#fffded] to-[#EEEEEE] cursor-default select-none
+}
